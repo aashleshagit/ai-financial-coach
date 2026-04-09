@@ -1,0 +1,196 @@
+
+/* 🌈 BACKGROUND */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  margin: 0;
+  color: #222;
+  animation: fadePage 0.6s ease;
+}
+
+/* 📦 CONTAINER */
+.container {
+  max-width: 420px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* 🌟 TITLE */
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, #ff7eb3, #ff758c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.dark h1 {
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* 💎 CARD */
+.card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 18px;
+  margin: 12px 0;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  transition: 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ✨ CARD HOVER */
+.card:hover {
+  transform: translateY(-6px) scale(1.02);
+}
+
+/* 💫 CARD SHINE */
+.card::before {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: -50%;
+  left: -50%;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.2), transparent);
+  transform: rotate(25deg);
+  transition: 0.5s;
+}
+
+.card:hover::before {
+  left: 100%;
+}
+
+/* 🔘 BUTTON */
+button {
+  background: linear-gradient(135deg, #ff7eb3, #ff758c);
+  border: none;
+  padding: 10px 14px;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  position: relative;
+}
+
+/* 🔥 BUTTON HOVER */
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+button::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(255, 118, 136, 0.6);
+  opacity: 0;
+  transition: 0.3s;
+}
+
+button:hover::after {
+  opacity: 1;
+}
+
+/* 🧠 INPUT */
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 6px 0;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  transition: 0.3s;
+}
+
+input:focus {
+  transform: scale(1.03);
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+/* 💡 TEXT */
+p {
+  margin: 6px 0;
+}
+
+/* 🤖 AI TEXT */
+#suggestion {
+  font-weight: 500;
+  line-height: 1.4;
+  animation: glowAI 2s infinite alternate;
+}
+
+@keyframes glowAI {
+  from { text-shadow: 0 0 5px #ff7eb3; }
+  to { text-shadow: 0 0 15px #ff758c; }
+}
+
+/* 📊 CHART */
+canvas {
+  margin-top: 10px;
+  animation: popChart 0.5s ease;
+}
+
+@keyframes popChart {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* 🌙 DARK MODE */
+.dark {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: white;
+}
+
+.dark .card {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.dark input {
+  background: rgba(255,255,255,0.1);
+  color: white;
+}
+
+.dark button {
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+}
+
+.dark p,
+.dark span,
+.dark h2,
+.dark h3 {
+  color: white;
+}
+
+.dark #suggestion {
+  color: #e0f7fa;
+}
+
+/* 🌈 SCROLLBAR */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#ff7eb3, #ff758c);
+  border-radius: 10px;
+}
+
+/* 🌟 PAGE ANIMATION */
+@keyframes fadePage {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+#moodStatus {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+}

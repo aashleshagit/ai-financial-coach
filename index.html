@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AI Financial Coach</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="container">
+
+  <h1>💸 AI Financial Coach</h1>
+  <button onclick="toggleDark()">🌙 Dark Mode</button>
+
+  <!-- AUTH -->
+  <div id="authPage" class="card">
+    <h2 id="authTitle">Login</h2>
+
+    <input id="username" placeholder="Username">
+    <input id="password" type="password" placeholder="Password">
+
+    <button onclick="handleAuth()">Login</button>
+
+    <p onclick="toggleAuth()">Switch Login / Signup</p>
+    <p onclick="showForgot()">Forgot Password?</p>
+  </div>
+
+  <!-- FORGOT -->
+  <div id="forgotPage" class="card" style="display:none;">
+    <h3>Reset Password</h3>
+    <input id="fUser" placeholder="Username">
+    <input id="fPass" placeholder="New Password">
+    <button onclick="resetPassword()">Reset</button>
+    <p onclick="back()">Back</p>
+  </div>
+
+  <!-- APP -->
+  <div id="appPage" style="display:none;">
+
+    <h2>Welcome <span id="userName"></span></h2>
+    <button onclick="logout()">Logout</button>
+
+    <!-- Budget -->
+    <div class="card">
+      <input id="budgetInput" placeholder="Monthly Budget">
+      <button onclick="setBudget()">Set</button>
+      <p>Budget: ₹ <span id="budget">0</span></p>
+    </div>
+
+    
+<!-- 🇮🇳 INDIA FEATURES -->
+<div class="card">
+  <h3>🇮🇳 Student Mode</h3>
+
+  <button onclick="toggleStudentMode()">🎓 Toggle Hostel Mode</button>
+  <p id="studentModeStatus">Mode: Normal</p>
+
+  <hr>
+
+  <h4>💸 Pocket Money</h4>
+  <input id="pocketMoneyInput" placeholder="Enter pocket money">
+  <button onclick="setPocketMoney()">Set Pocket Money</button>
+  <p>Remaining: ₹ <span id="remainingPocket">0</span></p>
+
+  <hr>
+
+  <h4>📲 Payment Mode</h4>
+  <button onclick="setPayment('UPI')">UPI</button>
+  <button onclick="setPayment('Cash')">Cash</button>
+  <p>Selected: <span id="paymentMode">None</span></p>
+
+  <hr>
+
+  <h4>🎉 Event Mode</h4>
+  <button onclick="toggleEvent()">Toggle Fest Mode</button>
+  <p id="eventStatus">Event Mode: OFF</p>
+
+</div>
+
+    <!-- Category -->
+    <div class="card">
+      <button onclick="selectCategory('food')">Food</button>
+      <button onclick="selectCategory('travel')">Travel</button>
+      <button onclick="selectCategory('rent')">Rent</button>
+      <button onclick="selectCategory('shopping')">Shopping</button>
+      <p>Selected: <span id="selectedCat">None</span></p>
+    </div>
+
+    <!-- Expense -->
+    <div class="card">
+      <input id="amount" placeholder="Amount">
+      <button onclick="addExpense()">Add Expense</button>
+    </div>
+
+    <!-- AI -->
+    <div class="card">
+      <h3>AI Coach</h3>
+      <p id="suggestion"></p>
+    </div>
+
+    <div class="card">
+  <h3>🧠 Your Financial Mood</h3>
+  <p id="moodStatus">Analyzing...</p>
+</div>
+
+
+<!-- 🎮 GAMIFICATION -->
+<div class="card">
+  <h3>🎮 Smart Savings Game</h3>
+
+  <p>⭐ Points: <span id="points">0</span></p>
+  <p>🔥 Streak: <span id="streak">0</span> days</p>
+
+  <button onclick="startNoSpend()">🚫 Start No-Spend Challenge</button>
+  <p id="challengeStatus">Challenge: OFF</p>
+
+</div>
+
+    <!-- Summary -->
+    <div class="card">
+      <h3>Summary</h3>
+      <p>Today: ₹ <span id="todaySpend">0</span></p>
+      <p>Week: ₹ <span id="weekSpend">0</span></p>
+      <p>Month: ₹ <span id="monthSpend">0</span></p>
+    </div>
+
+    <!-- Chart -->
+    <div class="card">
+      <canvas id="myChart"></canvas>
+    </div>
+
+    
+<!-- 📊 SMART INSIGHTS -->
+<div class="card">
+  <h3>📊 Smart Insights</h3>
+
+  <p>💰 Top Spending: <span id="topCategory">-</span></p>
+  <p>📉 Monthly Prediction: ₹ <span id="prediction">0</span></p>
+  <p>⚠️ Risk Alert: <span id="riskAlert">-</span></p>
+
+</div>
+
+
+<!-- 🧠 FINAL AI DASHBOARD -->
+<div class="card">
+  <h3>🧠 AI Dashboard</h3>
+
+  <p>💯 Financial Health Score: <span id="healthScore">0</span>/100</p>
+  <p>📈 Spending Trend: <span id="trend">-</span></p>
+
+  <canvas id="trendChart"></canvas>
+</div>
+
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
