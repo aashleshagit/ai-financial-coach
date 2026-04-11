@@ -1,31 +1,35 @@
 # AI Financial Coach 💸🤖
 
-An AI-powered assistant that helps students manage money using behavioral insights and LLMs.
+A smart web-based financial assistant designed for students to track expenses, analyze spending behavior, and provide intelligent financial insights.
 
 ## 🚀 Features
-- Expense tracking & categorization
-- Smart insights dashboard
-- Predictive alerts ("You may run out of money in 5 days")
-- Personalized financial suggestions
+- Expense tracking with category selection
+- Budget management system
+- Smart insights & spending predictions
+- Financial health score & trend analysis
+- Mood detection based on spending behavior
+- Gamification (points, streaks, no-spend challenge)
+- Student mode (hostel, pocket money tracking)
+- Voice feedback using speech synthesis
+- Interactive charts (Chart.js)
 
-## 🧠 Tech Stack
-- Python
-- OpenAI API (LLM + embeddings)
-- FAISS (vector database)
-- Streamlit (UI)
+## 🧠 How it works
+The system uses rule-based logic to analyze user spending patterns, detect trends, and generate personalized financial suggestions. It evaluates factors like daily average spending, category distribution, late-night activity, and impulsive expenses.
 
-## 🔍 How it works
-1. User data is converted into embeddings
-2. Stored in a vector database
-3. Relevant context is retrieved using similarity search
-4. LLM generates personalized financial advice (RAG pipeline)
+## 🛠 Tech Stack
+- HTML, CSS, JavaScript
+- Chart.js (data visualization)
+- Web Speech API (voice feedback)
+- LocalStorage (authentication & data persistence)
 
 ## ⚡ Key Learnings
-- Importance of chunking & embedding quality
-- Prompt engineering to reduce hallucinations
-- Building scalable LLM pipelines
+- Designing user-centric financial dashboards
+- Behavioral analysis using logic-based systems
+- Building interactive and dynamic UI
+- Implementing gamification for engagement
 
 ## 📌 Future Improvements
-- Real-time bank integration
-- Advanced behavioral nudges
-- Mobile app version
+- Integrate real AI/LLM for smarter insights
+- Add backend + database
+- Implement embeddings & recommendation system
+- Convert into mobile app
