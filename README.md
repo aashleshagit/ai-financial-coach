@@ -22,6 +22,20 @@ The system uses rule-based logic to analyze user spending patterns, detect trend
 - Web Speech API (voice feedback)
 - LocalStorage (authentication & data persistence)
 
+## Screenshots
+
+### Login Screen
+![Login Screen](Screenshots/login.png)
+
+### Dashboard
+![Dashboard](Screenshots/dashboard.png)
+
+### Add Password
+![Add Password](Screenshots/add-password.png)
+
+### Password Generator
+![Password Generator](Screenshots/password-generator.png)
+
 ## ⚡ Key Learnings
 - Designing user-centric financial dashboards
 - Behavioral analysis using logic-based systems
