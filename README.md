@@ -34,7 +34,7 @@ The system uses rule-based logic to analyze user spending patterns, detect trend
 ![Add Password](Screenshots/add-password.png)
 
 ### Password Generator
-![Password Generator](Screenshots/password-generator.png)
+![Password Generator](images/Screenshot 2026-06-29 174240.png)
 
 ## ⚡ Key Learnings
 - Designing user-centric financial dashboards
