@@ -30,10 +30,10 @@ The system uses rule-based logic to analyze user spending patterns, detect trend
 ### Dashboard
 ![Dashboard](images/Screenshot%202026-06-29%20174031.png)
 
-### Add Password
+### AI Coach
 ![Add Password](images/Screenshot%202026-06-29%20174200.png)
 
-### Password Generator
+### Insights
 ![Password Generator](images/Screenshot%202026-06-29%20174240.png)
 
 ## ⚡ Key Learnings
